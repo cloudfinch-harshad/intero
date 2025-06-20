@@ -1,0 +1,16 @@
+{
+  "name": "intero",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "sh scripts/dev.sh",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && . .venv/bin/activate && python -m uvicorn main:app --reload --port 8000 --host 0.0.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
